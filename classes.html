@@ -85,6 +85,12 @@
               
                 <li><a href="functions.html#x509-to-cert-context">x509_to_cert_context</a></li>
               
+                <li><a href="functions.html#import-private-key">import_private_key</a></li>
+              
+                <li><a href="functions.html#delete-private-key">delete_private_key</a></li>
+              
+                <li><a href="functions.html#assign-private-key">assign_private_key</a></li>
+              
             </ul>
           </li>
         
@@ -180,6 +186,22 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>use_system_certs</strong> – True if the default operating system certificates should be used for verification. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5boost6wintls7context15use_certificateEPK12CERT_CONTEXT">
+<span id="_CPPv3N5boost6wintls7context15use_certificateEPK12CERT_CONTEXT"></span><span id="_CPPv2N5boost6wintls7context15use_certificateEPK12CERT_CONTEXT"></span><span id="boost::wintls::context::use_certificate__CERT_CONTEXTCP"></span><span class="target" id="classboost_1_1wintls_1_1context_1a88b1c682d0b510ab606010e30ee5e45a"></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">use_certificate</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">CERT_CONTEXT</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">cert</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5boost6wintls7context15use_certificateEPK12CERT_CONTEXT" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the certificate to use when operating as a server. </p>
+<p>This function sets the certficate to use when using a <a class="reference internal" href="#classboost_1_1wintls_1_1stream"><span class="std std-ref">stream</span></a> as server.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The certificate must be associated with a private key. Not doing so will result in unexpected behavior. </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>cert</strong> – The certificate with an associated private the <a class="reference internal" href="#classboost_1_1wintls_1_1stream"><span class="std std-ref">stream</span></a> will use for encrypting messages when operating as a server.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -534,7 +556,7 @@
     </p>
     <p>
         &copy; Copyright 2021, Kasper Laudrup.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.1.0.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.1.1.<br/>
     </p>
   </div>
 </footer>
